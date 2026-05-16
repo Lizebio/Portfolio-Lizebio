@@ -4,20 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio de Lizebio Junior — Desenvolvedor Frontend, Analista de Dados e DBA com mais de 5 anos de experiência.">
-    <meta property="og:title" content="Portfolio — Lizebio Junior">
+    <meta property="og:title" content="Lizebio Junior — Portfolio">
     <meta property="og:description" content="Desenvolvedor Frontend, Analista de Dados e DBA.">
-    <title>Portfolio — Lizebio Junior</title>
+    <title>Lizebio Junior — Portfolio</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- ── PRELOADER ─────────────────────────────── -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">L<span>.</span></div>
+            <div class="preloader-bar"><div class="preloader-fill"></div></div>
+            <p class="preloader-text">Loading...</p>
+        </div>
+    </div>
+
+    <!-- ── CUSTOM CURSOR ──────────────────────────── -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- ── SCROLL PROGRESS ───────────────────────── -->
+    <div id="scroll-progress"></div>
+
+    <!-- ── SIDE NAV DOTS ─────────────────────────── -->
+    <nav class="side-nav" aria-label="Navegação lateral">
+        <a href="#home"         class="side-dot active" data-label="Home"></a>
+        <a href="#stats"        class="side-dot"        data-label="Stats"></a>
+        <a href="#education"    class="side-dot"        data-label="Experience"></a>
+        <a href="#services"     class="side-dot"        data-label="Services"></a>
+        <a href="#skills"       class="side-dot"        data-label="Skills"></a>
+        <a href="#testimonials" class="side-dot"        data-label="Testimonials"></a>
+        <a href="#contact"      class="side-dot"        data-label="Contact"></a>
+    </nav>
+
+    <!-- ── HEADER ─────────────────────────────────── -->
     <header class="header">
-        <a href="#" class="logo">Lizebio<span>.</span></a>
+        <a href="#home" class="logo">Lizebio<span>.</span></a>
         <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
-            <a href="#home" class="active">Home</a>
+            <a href="#home"         class="active">Home</a>
             <a href="#education">Experience</a>
             <a href="#services">Services</a>
             <a href="#skills">Skills</a>
@@ -26,29 +54,73 @@
         </nav>
     </header>
 
+    <!-- ── HERO ───────────────────────────────────── -->
     <section class="home" id="home">
+        <canvas id="particles-canvas"></canvas>
+
         <div class="home-img" data-animate="fade-right">
-            <img src="image.jpg" alt="Foto de perfil de Lizebio Junior">
+            <div class="img-wrapper">
+                <img src="image.jpg" alt="Foto de perfil de Lizebio Junior">
+                <div class="img-ring ring-1"></div>
+                <div class="img-ring ring-2"></div>
+                <div class="img-ring ring-3"></div>
+            </div>
         </div>
+
         <div class="home-content" data-animate="fade-left">
-            <h3>Hi, It's</h3>
-            <h1>Lizebio Junior</h1>
+            <h3 class="greeting">Hi, It's</h3>
+            <h1 class="glitch" data-text="Lizebio Junior">Lizebio Junior</h1>
             <div class="text-animation">
                 <h3>I'm a <span></span></h3>
             </div>
             <p>Profissional de tecnologia com mais de 5 anos de experiência em desenvolvimento web, análise de dados e administração de banco de dados. Comprometido em entregar soluções inovadoras e eficientes que geram valor real.</p>
             <div class="social-icons">
-                <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
-                <a href="#" aria-label="GitHub"><i class='bx bxl-github'></i></a>
-                <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.linkedin.com/in/lizebio-junior-1361a7190" target="_blank" rel="noopener" aria-label="LinkedIn" class="magnetic-wrap"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Lizebio" target="_blank" rel="noopener" aria-label="GitHub" class="magnetic-wrap"><i class='bx bxl-github'></i></a>
+                <a href="#" aria-label="Instagram" class="magnetic-wrap"><i class='bx bxl-instagram'></i></a>
             </div>
             <div class="btn-group">
-                <a href="#contact" class="btn">Hire Me</a>
-                <a href="#contact" class="btn btn-outline">Contact</a>
+                <a href="#contact" class="btn magnetic-btn">Hire Me <i class='bx bx-rocket'></i></a>
+                <a href="#contact" class="btn btn-outline magnetic-btn">Contact <i class='bx bx-send'></i></a>
             </div>
         </div>
     </section>
 
+    <!-- ── STATS ──────────────────────────────────── -->
+    <section class="stats" id="stats">
+        <div class="stats-container">
+            <div class="stat-item" data-animate="fade-up" style="--delay:0ms">
+                <div class="stat-icon"><i class='bx bx-calendar-check'></i></div>
+                <div class="stat-number-wrap">
+                    <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
+                </div>
+                <p>Anos de Experiência</p>
+            </div>
+            <div class="stat-item" data-animate="fade-up" style="--delay:120ms">
+                <div class="stat-icon"><i class='bx bx-briefcase-alt-2'></i></div>
+                <div class="stat-number-wrap">
+                    <span class="stat-number" data-target="30">0</span><span class="stat-suffix">+</span>
+                </div>
+                <p>Projetos Entregues</p>
+            </div>
+            <div class="stat-item" data-animate="fade-up" style="--delay:240ms">
+                <div class="stat-icon"><i class='bx bx-happy-heart-eyes'></i></div>
+                <div class="stat-number-wrap">
+                    <span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span>
+                </div>
+                <p>Clientes Satisfeitos</p>
+            </div>
+            <div class="stat-item" data-animate="fade-up" style="--delay:360ms">
+                <div class="stat-icon"><i class='bx bx-award'></i></div>
+                <div class="stat-number-wrap">
+                    <span class="stat-number" data-target="3">0</span><span class="stat-suffix">+</span>
+                </div>
+                <p>Certificações</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── EXPERIENCE ─────────────────────────────── -->
     <section class="education" id="education">
         <h2 class="heading">Ex<span>per</span>ience</h2>
         <div class="timeline-items">
@@ -87,29 +159,38 @@
         </div>
     </section>
 
+    <!-- ── SERVICES ───────────────────────────────── -->
     <section class="services" id="services">
         <h2 class="heading">Ser<span>vi</span>ces</h2>
         <div class="services-container">
-            <div class="service-box" data-animate="fade-up" style="--delay: 0ms">
+            <div class="service-box tilt-card" data-animate="fade-up" style="--delay:0ms">
+                <div class="service-glow"></div>
                 <div class="service-info">
+                    <i class='bx bx-code-block service-icon'></i>
                     <h4>Frontend Dev</h4>
                     <p>Interfaces modernas e responsivas com HTML5, CSS3 e JavaScript — focadas em UX e performance.</p>
                 </div>
             </div>
-            <div class="service-box" data-animate="fade-up" style="--delay: 100ms">
+            <div class="service-box tilt-card" data-animate="fade-up" style="--delay:100ms">
+                <div class="service-glow"></div>
                 <div class="service-info">
+                    <i class='bx bx-data service-icon'></i>
                     <h4>Backend & DBA</h4>
                     <p>Desenvolvimento de APIs, administração e otimização de banco de dados com SQL Server.</p>
                 </div>
             </div>
-            <div class="service-box" data-animate="fade-up" style="--delay: 200ms">
+            <div class="service-box tilt-card" data-animate="fade-up" style="--delay:200ms">
+                <div class="service-glow"></div>
                 <div class="service-info">
+                    <i class='bx bx-trending-up service-icon'></i>
                     <h4>Data Analysis</h4>
                     <p>Análise e visualização de dados para apoio à tomada de decisões estratégicas de negócio.</p>
                 </div>
             </div>
-            <div class="service-box" data-animate="fade-up" style="--delay: 300ms">
+            <div class="service-box tilt-card" data-animate="fade-up" style="--delay:300ms">
+                <div class="service-glow"></div>
                 <div class="service-info">
+                    <i class='bx bx-bar-chart-alt-2 service-icon'></i>
                     <h4>Power BI</h4>
                     <p>Dashboards interativos e relatórios executivos que transformam dados em insights acionáveis.</p>
                 </div>
@@ -117,63 +198,33 @@
         </div>
     </section>
 
+    <!-- ── SKILLS ─────────────────────────────────── -->
     <section class="skills" id="skills">
         <h2 class="heading">My <span>Skills</span></h2>
         <div class="skills-container">
             <div class="skills-left" data-animate="fade-right">
                 <h3 class="skills-subtitle">Technical Skills</h3>
-
                 <div class="skill-bar">
-                    <div class="skill-info">
-                        <span>HTML5</span>
-                        <span class="skill-percent">90%</span>
-                    </div>
-                    <div class="skill-progress">
-                        <div class="skill-fill" data-target="90"></div>
-                    </div>
+                    <div class="skill-info"><span>HTML5</span><span class="skill-percent">90%</span></div>
+                    <div class="skill-progress"><div class="skill-fill" data-target="90"></div></div>
                 </div>
-
                 <div class="skill-bar">
-                    <div class="skill-info">
-                        <span>CSS3</span>
-                        <span class="skill-percent">85%</span>
-                    </div>
-                    <div class="skill-progress">
-                        <div class="skill-fill" data-target="85"></div>
-                    </div>
+                    <div class="skill-info"><span>CSS3</span><span class="skill-percent">85%</span></div>
+                    <div class="skill-progress"><div class="skill-fill" data-target="85"></div></div>
                 </div>
-
                 <div class="skill-bar">
-                    <div class="skill-info">
-                        <span>JavaScript</span>
-                        <span class="skill-percent">75%</span>
-                    </div>
-                    <div class="skill-progress">
-                        <div class="skill-fill" data-target="75"></div>
-                    </div>
+                    <div class="skill-info"><span>JavaScript</span><span class="skill-percent">75%</span></div>
+                    <div class="skill-progress"><div class="skill-fill" data-target="75"></div></div>
                 </div>
-
                 <div class="skill-bar">
-                    <div class="skill-info">
-                        <span>SQL Server</span>
-                        <span class="skill-percent">88%</span>
-                    </div>
-                    <div class="skill-progress">
-                        <div class="skill-fill" data-target="88"></div>
-                    </div>
+                    <div class="skill-info"><span>SQL Server</span><span class="skill-percent">88%</span></div>
+                    <div class="skill-progress"><div class="skill-fill" data-target="88"></div></div>
                 </div>
-
                 <div class="skill-bar">
-                    <div class="skill-info">
-                        <span>Power BI</span>
-                        <span class="skill-percent">82%</span>
-                    </div>
-                    <div class="skill-progress">
-                        <div class="skill-fill" data-target="82"></div>
-                    </div>
+                    <div class="skill-info"><span>Power BI</span><span class="skill-percent">82%</span></div>
+                    <div class="skill-progress"><div class="skill-fill" data-target="82"></div></div>
                 </div>
             </div>
-
             <div class="skills-right" data-animate="fade-left">
                 <h3 class="skills-subtitle">Tools & Technologies</h3>
                 <div class="badges-container">
@@ -190,43 +241,32 @@
         </div>
     </section>
 
+    <!-- ── TESTIMONIALS ───────────────────────────── -->
     <section class="testimonials" id="testimonials">
         <h2 class="heading">Testi<span>monials</span></h2>
         <div class="testimonials-box">
             <div class="wrapper">
-                <div class="testimonial-item" data-animate="fade-up" style="--delay: 0ms">
+                <div class="testimonial-item tilt-card" data-animate="fade-up" style="--delay:0ms">
                     <img src="1.jpg" alt="Foto de Maria Silva">
                     <h2>Maria Silva</h2>
                     <div class="stars">
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
                     </div>
                     <p>"Excelente profissional, entregou o dashboard de análise de dados bem antes do prazo e superou todas as expectativas."</p>
                 </div>
-                <div class="testimonial-item" data-animate="fade-up" style="--delay: 150ms">
+                <div class="testimonial-item tilt-card" data-animate="fade-up" style="--delay:150ms">
                     <img src="2.jpg" alt="Foto de João Santos">
                     <h2>João Santos</h2>
                     <div class="stars">
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
                     </div>
                     <p>"Incrível trabalho no Power BI! Os relatórios ficaram muito profissionais e intuitivos para toda a equipe."</p>
                 </div>
-                <div class="testimonial-item" data-animate="fade-up" style="--delay: 300ms">
+                <div class="testimonial-item tilt-card" data-animate="fade-up" style="--delay:300ms">
                     <img src="3.jpg" alt="Foto de Ana Oliveira">
                     <h2>Ana Oliveira</h2>
                     <div class="stars">
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
-                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
                     </div>
                     <p>"Gerenciamento de banco de dados impecável. Resolveu problemas complexos com soluções elegantes e eficientes."</p>
                 </div>
@@ -234,41 +274,73 @@
         </div>
     </section>
 
+    <!-- ── CONTACT ────────────────────────────────── -->
     <section class="contact" id="contact">
         <h2 class="heading">Con<span>tact</span> Me</h2>
         <form id="contact-form" action="https://formspree.io/f/xjglnpld" method="POST" data-animate="fade-up">
-            <div class="input-box">
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="email" name="email" placeholder="Email Address" required>
+            <div class="input-row">
+                <div class="input-wrapper">
+                    <input type="text" name="name" id="name" placeholder=" " required autocomplete="name">
+                    <label for="name">Full Name</label>
+                    <div class="input-line"></div>
+                </div>
+                <div class="input-wrapper">
+                    <input type="email" name="email" id="email" placeholder=" " required autocomplete="email">
+                    <label for="email">Email Address</label>
+                    <div class="input-line"></div>
+                </div>
             </div>
-            <div class="input-box">
-                <input type="tel" name="phone" placeholder="Phone Number">
-                <input type="text" name="subject" placeholder="Subject" required>
+            <div class="input-row">
+                <div class="input-wrapper">
+                    <input type="tel" name="phone" id="phone" placeholder=" " autocomplete="tel">
+                    <label for="phone">Phone Number</label>
+                    <div class="input-line"></div>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" name="subject" id="subject" placeholder=" " required>
+                    <label for="subject">Subject</label>
+                    <div class="input-line"></div>
+                </div>
             </div>
-            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn" id="submit-btn">Send Message</button>
+            <div class="input-wrapper textarea-wrapper">
+                <textarea name="message" id="message" rows="6" placeholder=" " required></textarea>
+                <label for="message">Your Message</label>
+                <div class="input-line"></div>
+            </div>
+            <button type="submit" class="btn magnetic-btn" id="submit-btn">
+                Send Message <i class='bx bx-send'></i>
+            </button>
             <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
         </form>
     </section>
 
+    <!-- ── FOOTER ─────────────────────────────────── -->
     <footer class="footer">
-        <div class="social">
-            <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
-            <a href="#" aria-label="GitHub"><i class='bx bxl-github'></i></a>
-            <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
-        </div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#education">Experience</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="copyright">
-            <p>© 2024 Lizebio Junior. All rights reserved.</p>
+        <div class="footer-inner">
+            <div class="footer-logo">Lizebio<span>.</span></div>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/lizebio-junior-1361a7190" target="_blank" rel="noopener" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Lizebio" target="_blank" rel="noopener" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#education">Experience</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="copyright">
+                <p>© 2024 Lizebio Junior. Crafted with <span>♥</span> &amp; code.</p>
+            </div>
         </div>
     </footer>
+
+    <!-- ── BACK TO TOP ────────────────────────────── -->
+    <button id="back-to-top" aria-label="Voltar ao topo">
+        <i class='bx bx-chevron-up'></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
