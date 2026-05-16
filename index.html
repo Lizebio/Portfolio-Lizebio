@@ -1,258 +1,275 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Portfolio website</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Portfolio de Lizebio Junior — Desenvolvedor Frontend, Analista de Dados e DBA com mais de 5 anos de experiência.">
+    <meta property="og:title" content="Portfolio — Lizebio Junior">
+    <meta property="og:description" content="Desenvolvedor Frontend, Analista de Dados e DBA.">
+    <title>Portfolio — Lizebio Junior</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <header class="header">
-        <a href="#home" class="logo">Lizebio
-            <span>Junior</span></a>
-
+        <a href="#" class="logo">Lizebio<span>.</span></a>
         <i class='bx bx-menu' id="menu-icon"></i>
-
-
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#education">Experience</a>
             <a href="#services">Services</a>
+            <a href="#skills">Skills</a>
             <a href="#testimonials">Testimonials</a>
             <a href="#contact">Contact</a>
-
-
         </nav>
     </header>
 
-
     <section class="home" id="home">
-        <div class="home-content">
-            <h1>Hi, It's <span>Junior</span></h1>
-            <h3 class="text-animation">I'm a <span></span></h3>
-            <p>With over 5 years of experience in the technology field, I have built a diverse career working as a DBA, Web Developer, Data Analyst, and in other specialties. My passion is to explore the potential of technology to create innovative, efficient solutions that truly make a difference.</p>
-    
-            <div class="social-icons">
-                <a href="https://br.linkedin.com/in/lizebio-junior-1361a7190"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/Lizebio"><i class='bx bxl-github'></i></a>
-                <a href="https://www.instagram.com/lizebinho/"><i class='bx bxl-instagram-alt'></i></a>
-            </div>
-    
-            <div class="btn-group">
-                <a href="#" class="btn">Hire</a>
-                <a href="#contact" class="btn">Contact</a>
-            </div>
+        <div class="home-img" data-animate="fade-right">
+            <img src="image.jpg" alt="Foto de perfil de Lizebio Junior">
         </div>
-    
-        <div class="home-img">
-            <img src="image.jpg" alt="">
+        <div class="home-content" data-animate="fade-left">
+            <h3>Hi, It's</h3>
+            <h1>Lizebio Junior</h1>
+            <div class="text-animation">
+                <h3>I'm a <span></span></h3>
+            </div>
+            <p>Profissional de tecnologia com mais de 5 anos de experiência em desenvolvimento web, análise de dados e administração de banco de dados. Comprometido em entregar soluções inovadoras e eficientes que geram valor real.</p>
+            <div class="social-icons">
+                <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                <a href="#" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+            </div>
+            <div class="btn-group">
+                <a href="#contact" class="btn">Hire Me</a>
+                <a href="#contact" class="btn btn-outline">Contact</a>
+            </div>
         </div>
     </section>
 
     <section class="education" id="education">
-        <h2 class="heading">Experience</h2>
+        <h2 class="heading">Ex<span>per</span>ience</h2>
         <div class="timeline-items">
-            <div class="timeline-item">
+            <div class="timeline-item" data-animate="fade-right">
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">2021</div>
                 <div class="timeline-content">
-                    <h3>Computer Systems Analysis</h3>
-                    <p>Bachelor’s Degree in Computer Systems Analysis and Development</p>
+                    <h3>Análise e Desenvolvimento de Sistemas</h3>
+                    <p>Conclusão da graduação em Análise e Desenvolvimento de Sistemas, com foco em programação, banco de dados e engenharia de software.</p>
                 </div>
             </div>
-            <div class="timeline-item">
+            <div class="timeline-item" data-animate="fade-left">
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">2022</div>
                 <div class="timeline-content">
-                    <h3>Junior Systems Analyst and Front-End Developer</h3>
-                    <p>At Sancall Comercio e Servicos de Telecomunicacao LTDA</p>
+                    <h3>Analista de Sistemas Júnior</h3>
+                    <p>Início da carreira profissional como Analista de Sistemas Júnior, desenvolvendo sistemas web e apoiando a equipe de banco de dados.</p>
                 </div>
             </div>
-            <div class="timeline-item">
+            <div class="timeline-item" data-animate="fade-right">
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">2023</div>
                 <div class="timeline-content">
-                    <h3>MIS Assistant</h3>
-                    <p>At Tel Contact Center</p>
+                    <h3>Analista de Sistemas Pleno</h3>
+                    <p>Promoção para Analista Pleno com responsabilidade por projetos de maior complexidade e liderança técnica em entregas de dados.</p>
                 </div>
             </div>
-            <div class="timeline-item">
+            <div class="timeline-item" data-animate="fade-left">
                 <div class="timeline-dot"></div>
                 <div class="timeline-date">2024</div>
                 <div class="timeline-content">
-                    <h3>Mid-Level MIS Analyst</h3>
-                    <p>At Grupo Elo</p>
+                    <h3>Analista de MIS Pleno</h3>
+                    <p>Atuação estratégica como Analista de MIS Pleno, gerenciando dashboards executivos e pipelines de dados corporativos com Power BI e SQL Server.</p>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <section class="services" id="services">
-        <h2 class="heading">Services</h2>
-
+        <h2 class="heading">Ser<span>vi</span>ces</h2>
         <div class="services-container">
-            <div class="service-box">
+            <div class="service-box" data-animate="fade-up" style="--delay: 0ms">
                 <div class="service-info">
-                    <h4>Frontend Developer</h4>
-                    <p>As a Frontend Developer, I design and build responsive, user-friendly websites. I specialize in creating visually appealing and interactive web applications using HTML, CSS, JavaScript, and modern frameworks to enhance user experience and functionality.</p>
+                    <h4>Frontend Dev</h4>
+                    <p>Interfaces modernas e responsivas com HTML5, CSS3 e JavaScript — focadas em UX e performance.</p>
                 </div>
             </div>
-
-            <div class="service-box">
+            <div class="service-box" data-animate="fade-up" style="--delay: 100ms">
                 <div class="service-info">
-                    <h4>Backend Development</h4>
-                    <p>As a DBA specializing in SQL Server, I manage database design, performance optimization, backups, security, and high availability solutions, ensuring data integrity and supporting business-critical applications.</p>
+                    <h4>Backend & DBA</h4>
+                    <p>Desenvolvimento de APIs, administração e otimização de banco de dados com SQL Server.</p>
                 </div>
             </div>
-
-            <div class="service-box">
+            <div class="service-box" data-animate="fade-up" style="--delay: 200ms">
                 <div class="service-info">
                     <h4>Data Analysis</h4>
-                    <p>I specialize in Data Analysis, transforming raw data into valuable insights. I offer services in data collection, cleaning, and analysis, along with creating visualizations and dashboards to help businesses make data-driven decisions and improve efficiency.</p>
+                    <p>Análise e visualização de dados para apoio à tomada de decisões estratégicas de negócio.</p>
+                </div>
+            </div>
+            <div class="service-box" data-animate="fade-up" style="--delay: 300ms">
+                <div class="service-info">
+                    <h4>Power BI</h4>
+                    <p>Dashboards interativos e relatórios executivos que transformam dados em insights acionáveis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="skills-container">
+            <div class="skills-left" data-animate="fade-right">
+                <h3 class="skills-subtitle">Technical Skills</h3>
+
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>HTML5</span>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-fill" data-target="90"></div>
+                    </div>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>CSS3</span>
+                        <span class="skill-percent">85%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-fill" data-target="85"></div>
+                    </div>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>JavaScript</span>
+                        <span class="skill-percent">75%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-fill" data-target="75"></div>
+                    </div>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>SQL Server</span>
+                        <span class="skill-percent">88%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-fill" data-target="88"></div>
+                    </div>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-info">
+                        <span>Power BI</span>
+                        <span class="skill-percent">82%</span>
+                    </div>
+                    <div class="skill-progress">
+                        <div class="skill-fill" data-target="82"></div>
+                    </div>
                 </div>
             </div>
 
-            <div class="service-box">
-                <div class="service-info">
-                    <h4>Power BI Business</h4>
-                    <p>With expertise in Power BI, I design interactive dashboards and reports that transform complex data into actionable insights, enabling data-driven decision-making and optimizing business performance.
-
-                    </p>
+            <div class="skills-right" data-animate="fade-left">
+                <h3 class="skills-subtitle">Tools & Technologies</h3>
+                <div class="badges-container">
+                    <div class="badge"><i class='bx bxl-git'></i> Git</div>
+                    <div class="badge"><i class='bx bxl-github'></i> GitHub</div>
+                    <div class="badge"><i class='bx bx-code-alt'></i> VS Code</div>
+                    <div class="badge"><i class='bx bxl-html5'></i> HTML5</div>
+                    <div class="badge"><i class='bx bxl-css3'></i> CSS3</div>
+                    <div class="badge"><i class='bx bxl-javascript'></i> JavaScript</div>
+                    <div class="badge"><i class='bx bx-data'></i> SQL Server</div>
+                    <div class="badge"><i class='bx bx-bar-chart-alt-2'></i> Power BI</div>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="testimonials" id="testimonials">
+        <h2 class="heading">Testi<span>monials</span></h2>
         <div class="testimonials-box">
-            <h2 class="heading">Testimonials</h2>
-
             <div class="wrapper">
-                <div class="testimonial-item">
-                    <img src="1.jpg" alt="">
-                    <h2>Marilyn</h2>
-                    <div class="rating">
-                        <i class='bx bxs-star'
-                         id="star" ></i>
-                         <i class='bx bxs-star'
-                         id="star" ></i>
-                         <i class='bx bxs-star'
-                         id="star" ></i>
-                         <i class='bx bxs-star'
-                         id="star" ></i>
-                         <i class='bx bxs-star'
-                         id="star" ></i>
+                <div class="testimonial-item" data-animate="fade-up" style="--delay: 0ms">
+                    <img src="1.jpg" alt="Foto de Maria Silva">
+                    <h2>Maria Silva</h2>
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
                     </div>
-                    <p>Junior's data analysis skills helped us uncover key insights that drove our business forward!</p>
+                    <p>"Excelente profissional, entregou o dashboard de análise de dados bem antes do prazo e superou todas as expectativas."</p>
                 </div>
-
-                <div class="testimonial-item">
-                    <img src="2.jpg" alt="">
-                    <h2>Julia</h2>
-                    <div class="rating">
-                        <i class='bx bxs-star'
-                        id="star" ></i>
-                        <i class='bx bxs-star'
-                        id="star" ></i>
-                        <i class='bx bxs-star'
-                        id="star" ></i>
-                        <i class='bx bxs-star'
-                        id="star" ></i>
-                        <i class='bx bxs-star'
-                        id="star" ></i>
+                <div class="testimonial-item" data-animate="fade-up" style="--delay: 150ms">
+                    <img src="2.jpg" alt="Foto de João Santos">
+                    <h2>João Santos</h2>
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
                     </div>
-                    <p>The dashboards Junior created with Power BI are not only visually stunning but incredibly insightful.</p>
+                    <p>"Incrível trabalho no Power BI! Os relatórios ficaram muito profissionais e intuitivos para toda a equipe."</p>
                 </div>
-
-                <div class="testimonial-item">
-                    <img src="3.jpg" alt="">
-                    <h2>Rebecca</h2>
-                    <div class="rating">
-                        <i class='bx bxs-star'
-                        id="star" ></i>
-                        <i class='bx bxs-star'
-                        id="star" ></i>
-                        <i class='bx bxs-star'
-                        id="star" ></i>
-                        <i class='bx bxs-star'
-                        id="star" ></i>
-                        <i class='bx bxs-star'
-                        id="star" ></i>
+                <div class="testimonial-item" data-animate="fade-up" style="--delay: 300ms">
+                    <img src="3.jpg" alt="Foto de Ana Oliveira">
+                    <h2>Ana Oliveira</h2>
+                    <div class="stars">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
                     </div>
-                    <p>His expertise as a DBA ensures our database runs smoothly and efficiently, making all the difference!</p>
+                    <p>"Gerenciamento de banco de dados impecável. Resolveu problemas complexos com soluções elegantes e eficientes."</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-
-        <form action="">
-            <div class="input-group">
-                <div class="input-box">
-                    <input type="text"
-                    placeholder="Full name">
-                    <input type="email"
-                     placeholder="Email">
-                </div>
-                <div class="input-box">
-                    <input type="number"
-                    placeholder="Phone Number">
-                    <input type="text"
-                    placeholder="Subject">
-                </div>
+        <h2 class="heading">Con<span>tact</span> Me</h2>
+        <form id="contact-form" action="https://formspree.io/f/xjglnpld" method="POST" data-animate="fade-up">
+            <div class="input-box">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
             </div>
-
-            <div class="input-group-2">
-                <textarea name="" id="" cols="30"
-                 rows="10" placeholder="Your Message"></textarea>
-                 <input type="submit" value="Send Message" class="btn">
+            <div class="input-box">
+                <input type="tel" name="phone" placeholder="Phone Number">
+                <input type="text" name="subject" placeholder="Subject" required>
             </div>
-
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn" id="submit-btn">Send Message</button>
+            <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
         </form>
     </section>
 
     <footer class="footer">
         <div class="social">
-            <a href="https://br.linkedin.com/in/lizebio-junior-1361a7190"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/Lizebio"><i class='bx bxl-github'></i></a>
-                <a href="https://www.instagram.com/lizebinho/"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+            <a href="#" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+            <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
         </div>
-
-        <ul class="list">
-            <li>
-                <a href="#">FAQ</a>
-            </li>
-
-            <li>
-                <a href="#">Services</a>
-            </li>
-
-            <li>
-                <a href="#">About Me</a>
-            </li>
-
-            <li>
-                <a href="#">Contact</a>
-            </li>
-
-            <li>
-                <a href="#">Testimonials</a>
-            </li>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#education">Experience</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-        <p class="copyright">
-            © Lizebio Junior | All Rights Reserved
-        </p>
-        
+        <div class="copyright">
+            <p>© 2024 Lizebio Junior. All rights reserved.</p>
+        </div>
     </footer>
-          
-                <script src="script.js"></script>
-</body>
 
+    <script src="script.js"></script>
+</body>
 </html>
