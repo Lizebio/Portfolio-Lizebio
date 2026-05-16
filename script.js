@@ -149,12 +149,12 @@ window.addEventListener('scroll', () => {
 const menuIcon = document.getElementById('menu-icon');
 const navbar   = document.querySelector('.navbar');
 menuIcon.addEventListener('click', () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
+    const isOpen = navbar.classList.toggle('active');
+    menuIcon.querySelector('i').className = isOpen ? 'fas fa-xmark' : 'fas fa-bars';
 });
 navLinks.forEach(l => l.addEventListener('click', () => {
     navbar.classList.remove('active');
-    menuIcon.classList.remove('bx-x');
+    menuIcon.querySelector('i').className = 'fas fa-bars';
 }));
 
 /* ═══════════════════════════════════════════════════════════
@@ -350,7 +350,7 @@ if (form) {
             return;
         }
         submitBtn.disabled = true;
-        submitBtn.innerHTML = 'Sending... <i class="bx bx-loader-alt bx-spin"></i>';
+        submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
         feedback.textContent = ''; feedback.className = 'form-feedback';
         try {
             const res = await fetch(form.action, {
@@ -367,7 +367,7 @@ if (form) {
             feedback.className = 'form-feedback error';
         } finally {
             submitBtn.disabled = false;
-            submitBtn.innerHTML = 'Send Message <i class="bx bx-send"></i>';
+            submitBtn.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
         }
     });
 }
