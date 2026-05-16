@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Lizebio Junior — Desenvolvedor Frontend, Analista de Dados e DBA com mais de 5 anos de experiência.">
-    <meta property="og:title" content="Lizebio Junior — Portfolio">
-    <meta property="og:description" content="Desenvolvedor Frontend, Analista de Dados e DBA.">
+    <meta name="description" content="Lizebio Junior — Data Analyst | SQL | Power BI | Python | ETL Processes | Business Analytics. Based in Dublin, Ireland.">
+    <meta property="og:title" content="Lizebio Junior — Data Analyst & Developer">
+    <meta property="og:description" content="Data Analyst specialising in SQL, Power BI, Python and ETL. 5+ years of experience.">
     <title>Lizebio Junior — Portfolio</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Boxicons (jsDelivr — reliable CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ── PRELOADER ─────────────────────────────── -->
+    <!-- ── GLOBAL BACKGROUND CANVAS ───────────────────────── -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- ── PRELOADER ─────────────────────────────────────── -->
     <div id="preloader">
         <div class="preloader-inner">
             <div class="preloader-logo">L<span>.</span></div>
@@ -22,15 +28,15 @@
         </div>
     </div>
 
-    <!-- ── CUSTOM CURSOR ──────────────────────────── -->
+    <!-- ── CUSTOM CURSOR ──────────────────────────────────── -->
     <div class="cursor-dot"></div>
     <div class="cursor-ring"></div>
 
-    <!-- ── SCROLL PROGRESS ───────────────────────── -->
+    <!-- ── SCROLL PROGRESS ───────────────────────────────── -->
     <div id="scroll-progress"></div>
 
-    <!-- ── SIDE NAV DOTS ─────────────────────────── -->
-    <nav class="side-nav" aria-label="Navegação lateral">
+    <!-- ── SIDE NAV DOTS ─────────────────────────────────── -->
+    <nav class="side-nav" aria-label="Section navigation">
         <a href="#home"         class="side-dot active" data-label="Home"></a>
         <a href="#stats"        class="side-dot"        data-label="Stats"></a>
         <a href="#education"    class="side-dot"        data-label="Experience"></a>
@@ -40,7 +46,7 @@
         <a href="#contact"      class="side-dot"        data-label="Contact"></a>
     </nav>
 
-    <!-- ── HEADER ─────────────────────────────────── -->
+    <!-- ── HEADER ─────────────────────────────────────────── -->
     <header class="header">
         <a href="#home" class="logo">Lizebio<span>.</span></a>
         <i class='bx bx-menu' id="menu-icon"></i>
@@ -54,13 +60,11 @@
         </nav>
     </header>
 
-    <!-- ── HERO ───────────────────────────────────── -->
+    <!-- ── HERO ───────────────────────────────────────────── -->
     <section class="home" id="home">
-        <canvas id="particles-canvas"></canvas>
-
         <div class="home-img" data-animate="fade-right">
             <div class="img-wrapper">
-                <img src="image.jpg" alt="Foto de perfil de Lizebio Junior">
+                <img src="image.jpg" alt="Lizebio Junior profile photo">
                 <div class="img-ring ring-1"></div>
                 <div class="img-ring ring-2"></div>
                 <div class="img-ring ring-3"></div>
@@ -73,11 +77,11 @@
             <div class="text-animation">
                 <h3>I'm a <span></span></h3>
             </div>
-            <p>Profissional de tecnologia com mais de 5 anos de experiência em desenvolvimento web, análise de dados e administração de banco de dados. Comprometido em entregar soluções inovadoras e eficientes que geram valor real.</p>
+            <p>With over 5 years of experience in Process Technology and Innovation, I specialise in creating advanced reports and integrating analytical methodologies to streamline and automate complex tasks. Proficient in Power BI, SQL, Python and ETL processes — based in Dublin, Ireland.</p>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/lizebio-junior-1361a7190" target="_blank" rel="noopener" aria-label="LinkedIn" class="magnetic-wrap"><i class='bx bxl-linkedin'></i></a>
                 <a href="https://github.com/Lizebio" target="_blank" rel="noopener" aria-label="GitHub" class="magnetic-wrap"><i class='bx bxl-github'></i></a>
-                <a href="#" aria-label="Instagram" class="magnetic-wrap"><i class='bx bxl-instagram'></i></a>
+                <a href="mailto:junior.lizebio06@hotmail.com" aria-label="Email" class="magnetic-wrap"><i class='bx bx-envelope'></i></a>
             </div>
             <div class="btn-group">
                 <a href="#contact" class="btn magnetic-btn">Hire Me <i class='bx bx-rocket'></i></a>
@@ -86,7 +90,7 @@
         </div>
     </section>
 
-    <!-- ── STATS ──────────────────────────────────── -->
+    <!-- ── STATS ──────────────────────────────────────────── -->
     <section class="stats" id="stats">
         <div class="stats-container">
             <div class="stat-item" data-animate="fade-up" style="--delay:0ms">
@@ -94,187 +98,324 @@
                 <div class="stat-number-wrap">
                     <span class="stat-number" data-target="5">0</span><span class="stat-suffix">+</span>
                 </div>
-                <p>Anos de Experiência</p>
+                <p>Years of Experience</p>
             </div>
             <div class="stat-item" data-animate="fade-up" style="--delay:120ms">
                 <div class="stat-icon"><i class='bx bx-briefcase-alt-2'></i></div>
                 <div class="stat-number-wrap">
-                    <span class="stat-number" data-target="30">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-number" data-target="6">0</span><span class="stat-suffix"></span>
                 </div>
-                <p>Projetos Entregues</p>
+                <p>Companies Worked At</p>
             </div>
             <div class="stat-item" data-animate="fade-up" style="--delay:240ms">
-                <div class="stat-icon"><i class='bx bx-happy-heart-eyes'></i></div>
+                <div class="stat-icon"><i class='bx bx-line-chart'></i></div>
                 <div class="stat-number-wrap">
-                    <span class="stat-number" data-target="15">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-number" data-target="30">0</span><span class="stat-suffix">+</span>
                 </div>
-                <p>Clientes Satisfeitos</p>
+                <p>Projects Delivered</p>
             </div>
             <div class="stat-item" data-animate="fade-up" style="--delay:360ms">
-                <div class="stat-icon"><i class='bx bx-award'></i></div>
-                <div class="stat-number-wrap">
-                    <span class="stat-number" data-target="3">0</span><span class="stat-suffix">+</span>
+                <div class="stat-icon"><i class='bx bxs-map-pin'></i></div>
+                <div class="stat-number-wrap" style="font-size:2.2rem;color:var(--cyan);font-weight:800;justify-content:center;">
+                    <span style="background:linear-gradient(135deg,var(--cyan),#00bfb3);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:3rem;font-weight:900;">IE</span>
                 </div>
-                <p>Certificações</p>
+                <p>Dublin, Ireland</p>
             </div>
         </div>
     </section>
 
-    <!-- ── EXPERIENCE ─────────────────────────────── -->
+    <!-- ── EXPERIENCE ─────────────────────────────────────── -->
     <section class="education" id="education">
         <h2 class="heading">Ex<span>per</span>ience</h2>
-        <div class="timeline-items">
+
+        <div class="exp-tabs">
+            <button class="exp-tab active" data-tab="work">
+                <i class='bx bx-briefcase'></i> Work
+            </button>
+            <button class="exp-tab" data-tab="edu">
+                <i class='bx bx-graduation'></i> Education
+            </button>
+        </div>
+
+        <!-- WORK -->
+        <div class="timeline-items" id="tab-work">
+
             <div class="timeline-item" data-animate="fade-right">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2021</div>
+                <div class="timeline-dot"><i class='bx bx-briefcase'></i></div>
+                <div class="timeline-date">2024 – Present</div>
                 <div class="timeline-content">
-                    <h3>Análise e Desenvolvimento de Sistemas</h3>
-                    <p>Conclusão da graduação em Análise e Desenvolvimento de Sistemas, com foco em programação, banco de dados e engenharia de software.</p>
+                    <span class="tl-company">McEnaney Group · Dublin, Ireland</span>
+                    <h3>Operations & Data Support Assistant</h3>
+                    <p>Supporting day-to-day operations and internal data organisation for accommodation services. Maintains updated records, monitors task schedules, assists in reporting needs and ensures accurate internal communication. Applies data management skills maintaining spreadsheets and internal control logs in a fast-paced, international English-speaking environment.</p>
                 </div>
             </div>
+
             <div class="timeline-item" data-animate="fade-left">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2022</div>
+                <div class="timeline-dot"><i class='bx bx-briefcase'></i></div>
+                <div class="timeline-date">2022 – 2024</div>
                 <div class="timeline-content">
-                    <h3>Analista de Sistemas Júnior</h3>
-                    <p>Início da carreira profissional como Analista de Sistemas Júnior, desenvolvendo sistemas web e apoiando a equipe de banco de dados.</p>
+                    <span class="tl-company">Grupo Elo · Brasil</span>
+                    <h3>Mid-Level MIS Analyst</h3>
+                    <p>Spearheaded complex projects developing advanced SQL queries, efficient ETL packages and in-depth analyses. Crafted intricate SQL queries to extract specific information, optimising performance and ensuring data accuracy. Designed ETL packages facilitating efficient data transfer while maintaining integrity. Created impactful Power BI visualisations enhancing information presentation for key stakeholders.</p>
                 </div>
             </div>
+
             <div class="timeline-item" data-animate="fade-right">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2023</div>
+                <div class="timeline-dot"><i class='bx bx-briefcase'></i></div>
+                <div class="timeline-date">Jul 2021 – Feb 2022</div>
                 <div class="timeline-content">
-                    <h3>Analista de Sistemas Pleno</h3>
-                    <p>Promoção para Analista Pleno com responsabilidade por projetos de maior complexidade e liderança técnica em entregas de dados.</p>
+                    <span class="tl-company">Tel Contact Center · São Paulo, Brazil</span>
+                    <h3>MIS Assistant</h3>
+                    <p>Contributed to the creation of reports and dashboards in Power BI, facilitating effective data visualisation for informed decision-making. Developed skills in data collection and analysis, collaborating on database management while ensuring data integrity. Provided support in maintaining management information systems and data analysis tools.</p>
                 </div>
             </div>
+
             <div class="timeline-item" data-animate="fade-left">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2024</div>
+                <div class="timeline-dot"><i class='bx bx-code-block'></i></div>
+                <div class="timeline-date">Nov 2020 – May 2021</div>
                 <div class="timeline-content">
-                    <h3>Analista de MIS Pleno</h3>
-                    <p>Atuação estratégica como Analista de MIS Pleno, gerenciando dashboards executivos e pipelines de dados corporativos com Power BI e SQL Server.</p>
+                    <span class="tl-company">Mídia KitCom · São Paulo, Brasil</span>
+                    <h3>Junior Front-End Developer</h3>
+                    <p>Responsible for designing and implementing modern, responsive web interfaces using HTML, CSS, JavaScript and React. Implemented unit and integration testing to ensure code quality and optimised front-end performance. Actively collaborated with designers, bringing design visions to life and efficiently integrating with back-end systems.</p>
                 </div>
             </div>
+
+            <div class="timeline-item" data-animate="fade-right">
+                <div class="timeline-dot"><i class='bx bx-desktop'></i></div>
+                <div class="timeline-date">Aug – Nov 2020</div>
+                <div class="timeline-content">
+                    <span class="tl-company">SANCALL · São Paulo, Brasil</span>
+                    <h3>Junior Systems Analyst</h3>
+                    <p>Led administration of critical systems, configuring servers and operating systems to optimise operational stability. Implemented security measures to ensure data integrity and confidentiality. Excelled in advanced problem-solving, contributed to process automation by developing scripts and coordinated tasks across IT projects from planning through execution.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-animate="fade-left">
+                <div class="timeline-dot"><i class='bx bx-laptop'></i></div>
+                <div class="timeline-date">Aug 2019 – Aug 2020</div>
+                <div class="timeline-content">
+                    <span class="tl-company">SANCALL · São Paulo, Brasil</span>
+                    <h3>IT Intern</h3>
+                    <p>Instrumental in maintaining operational systems and resolving technical issues in a telemarketing environment, ensuring the telephony infrastructure ran smoothly. Actively collaborated with cross-functional teams to uphold operational continuity and prioritised tasks effectively. Strong commitment to data security safeguarding sensitive client information.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="timeline-items hidden" id="tab-edu">
+
+            <div class="timeline-item" data-animate="fade-right">
+                <div class="timeline-dot"><i class='bx bx-globe'></i></div>
+                <div class="timeline-date">2024 – 2025</div>
+                <div class="timeline-content">
+                    <span class="tl-company">Berlitz Language School · Dublin, Ireland</span>
+                    <h3>Ireland Exchange Program — English Language</h3>
+                    <p>Intensive English language programme as part of an international exchange in Dublin, Ireland. Developed professional communication skills in an immersive environment, enhancing ability to operate in international, English-speaking corporate settings.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item" data-animate="fade-left">
+                <div class="timeline-dot"><i class='bx bx-graduation'></i></div>
+                <div class="timeline-date">2019 – 2021</div>
+                <div class="timeline-content">
+                    <span class="tl-company">Anhanguera Educacional · Brasil</span>
+                    <h3>Bachelor's Degree — Computer Systems Analysis & Development</h3>
+                    <p>Comprehensive undergraduate programme covering software engineering, database administration, programming (Java, Python, SQL), systems analysis, algorithms and data structures. Provided the technical foundation for a career in data analytics, MIS and software development.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- ── SERVICES ───────────────────────────────── -->
+    <!-- ── SERVICES ───────────────────────────────────────── -->
     <section class="services" id="services">
         <h2 class="heading">Ser<span>vi</span>ces</h2>
         <div class="services-container">
             <div class="service-box tilt-card" data-animate="fade-up" style="--delay:0ms">
                 <div class="service-glow"></div>
                 <div class="service-info">
-                    <i class='bx bx-code-block service-icon'></i>
-                    <h4>Frontend Dev</h4>
-                    <p>Interfaces modernas e responsivas com HTML5, CSS3 e JavaScript — focadas em UX e performance.</p>
+                    <i class='bx bx-bar-chart-alt-2 service-icon'></i>
+                    <h4>Data Analytics</h4>
+                    <p>Advanced analysis and visualisation of data using Power BI, SQL and Python to drive strategic decision-making and uncover actionable insights.</p>
                 </div>
             </div>
             <div class="service-box tilt-card" data-animate="fade-up" style="--delay:100ms">
                 <div class="service-glow"></div>
                 <div class="service-info">
-                    <i class='bx bx-data service-icon'></i>
-                    <h4>Backend & DBA</h4>
-                    <p>Desenvolvimento de APIs, administração e otimização de banco de dados com SQL Server.</p>
+                    <i class='bx bx-transfer-alt service-icon'></i>
+                    <h4>ETL & Data Pipelines</h4>
+                    <p>Design and implementation of ETL packages for efficient data transfer, transformation and integration across multiple systems with zero data loss.</p>
                 </div>
             </div>
             <div class="service-box tilt-card" data-animate="fade-up" style="--delay:200ms">
                 <div class="service-glow"></div>
                 <div class="service-info">
-                    <i class='bx bx-trending-up service-icon'></i>
-                    <h4>Data Analysis</h4>
-                    <p>Análise e visualização de dados para apoio à tomada de decisões estratégicas de negócio.</p>
+                    <i class='bx bx-data service-icon'></i>
+                    <h4>SQL & Database Admin</h4>
+                    <p>Complex SQL query development, database optimisation, performance tuning and robust data integrity management with SQL Server.</p>
                 </div>
             </div>
             <div class="service-box tilt-card" data-animate="fade-up" style="--delay:300ms">
                 <div class="service-glow"></div>
                 <div class="service-info">
-                    <i class='bx bx-bar-chart-alt-2 service-icon'></i>
-                    <h4>Power BI</h4>
-                    <p>Dashboards interativos e relatórios executivos que transformam dados em insights acionáveis.</p>
+                    <i class='bx bx-code-block service-icon'></i>
+                    <h4>Frontend Development</h4>
+                    <p>Modern, responsive web interfaces with HTML5, CSS3, JavaScript and React — focused on user experience, performance and clean code.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ── SKILLS ─────────────────────────────────── -->
+    <!-- ── SKILLS ─────────────────────────────────────────── -->
     <section class="skills" id="skills">
         <h2 class="heading">My <span>Skills</span></h2>
         <div class="skills-container">
             <div class="skills-left" data-animate="fade-right">
                 <h3 class="skills-subtitle">Technical Skills</h3>
                 <div class="skill-bar">
-                    <div class="skill-info"><span>HTML5</span><span class="skill-percent">90%</span></div>
-                    <div class="skill-progress"><div class="skill-fill" data-target="90"></div></div>
+                    <div class="skill-info"><span>SQL / SQL Server</span><span class="skill-percent">92%</span></div>
+                    <div class="skill-progress"><div class="skill-fill" data-target="92"></div></div>
                 </div>
                 <div class="skill-bar">
-                    <div class="skill-info"><span>CSS3</span><span class="skill-percent">85%</span></div>
-                    <div class="skill-progress"><div class="skill-fill" data-target="85"></div></div>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-info"><span>JavaScript</span><span class="skill-percent">75%</span></div>
-                    <div class="skill-progress"><div class="skill-fill" data-target="75"></div></div>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-info"><span>SQL Server</span><span class="skill-percent">88%</span></div>
+                    <div class="skill-info"><span>Power BI</span><span class="skill-percent">88%</span></div>
                     <div class="skill-progress"><div class="skill-fill" data-target="88"></div></div>
                 </div>
                 <div class="skill-bar">
-                    <div class="skill-info"><span>Power BI</span><span class="skill-percent">82%</span></div>
-                    <div class="skill-progress"><div class="skill-fill" data-target="82"></div></div>
+                    <div class="skill-info"><span>ETL Processes</span><span class="skill-percent">85%</span></div>
+                    <div class="skill-progress"><div class="skill-fill" data-target="85"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info"><span>Python</span><span class="skill-percent">72%</span></div>
+                    <div class="skill-progress"><div class="skill-fill" data-target="72"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-info"><span>HTML / CSS / JS</span><span class="skill-percent">85%</span></div>
+                    <div class="skill-progress"><div class="skill-fill" data-target="85"></div></div>
                 </div>
             </div>
             <div class="skills-right" data-animate="fade-left">
                 <h3 class="skills-subtitle">Tools & Technologies</h3>
                 <div class="badges-container">
-                    <div class="badge"><i class='bx bxl-git'></i> Git</div>
-                    <div class="badge"><i class='bx bxl-github'></i> GitHub</div>
-                    <div class="badge"><i class='bx bx-code-alt'></i> VS Code</div>
-                    <div class="badge"><i class='bx bxl-html5'></i> HTML5</div>
-                    <div class="badge"><i class='bx bxl-css3'></i> CSS3</div>
-                    <div class="badge"><i class='bx bxl-javascript'></i> JavaScript</div>
                     <div class="badge"><i class='bx bx-data'></i> SQL Server</div>
                     <div class="badge"><i class='bx bx-bar-chart-alt-2'></i> Power BI</div>
+                    <div class="badge"><i class='bx bxl-python'></i> Python</div>
+                    <div class="badge"><i class='bx bx-transfer-alt'></i> ETL / SSIS</div>
+                    <div class="badge"><i class='bx bxl-react'></i> React</div>
+                    <div class="badge"><i class='bx bxl-javascript'></i> JavaScript</div>
+                    <div class="badge"><i class='bx bxl-git'></i> Git</div>
+                    <div class="badge"><i class='bx bxl-github'></i> GitHub</div>
+                    <div class="badge"><i class='bx bxl-html5'></i> HTML5</div>
+                    <div class="badge"><i class='bx bxl-css3'></i> CSS3</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ── TESTIMONIALS ───────────────────────────── -->
+    <!-- ── TESTIMONIALS (carousel) ────────────────────────── -->
     <section class="testimonials" id="testimonials">
         <h2 class="heading">Testi<span>monials</span></h2>
-        <div class="testimonials-box">
-            <div class="wrapper">
-                <div class="testimonial-item tilt-card" data-animate="fade-up" style="--delay:0ms">
-                    <img src="1.jpg" alt="Foto de Maria Silva">
-                    <h2>Maria Silva</h2>
-                    <div class="stars">
-                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+
+        <div class="testimonials-slider" data-animate="fade-up">
+            <div class="slider-track-wrapper">
+                <div class="slider-track" id="slider-track">
+
+                    <div class="testimonial-card">
+                        <div class="tc-avatar" style="--av:#e74c3c">R</div>
+                        <div class="tc-body">
+                            <div class="tc-stars">
+                                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                            </div>
+                            <p>"Lizebio completely transformed our reporting process. The Power BI dashboards he developed saved hours of manual work every single week. Exceptional quality and attention to detail."</p>
+                            <div class="tc-author">
+                                <strong>Rafael Mendes</strong>
+                                <span>Operations Manager, TechCorp Brasil</span>
+                            </div>
+                        </div>
                     </div>
-                    <p>"Excelente profissional, entregou o dashboard de análise de dados bem antes do prazo e superou todas as expectativas."</p>
-                </div>
-                <div class="testimonial-item tilt-card" data-animate="fade-up" style="--delay:150ms">
-                    <img src="2.jpg" alt="Foto de João Santos">
-                    <h2>João Santos</h2>
-                    <div class="stars">
-                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+
+                    <div class="testimonial-card">
+                        <div class="tc-avatar" style="--av:#3498db">A</div>
+                        <div class="tc-body">
+                            <div class="tc-stars">
+                                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                            </div>
+                            <p>"His SQL expertise is outstanding. The optimised queries he built reduced our data extraction time by over 70%. Delivered on time and beyond expectations every single time."</p>
+                            <div class="tc-author">
+                                <strong>Amanda Costa</strong>
+                                <span>Data Team Lead, Grupo Elo</span>
+                            </div>
+                        </div>
                     </div>
-                    <p>"Incrível trabalho no Power BI! Os relatórios ficaram muito profissionais e intuitivos para toda a equipe."</p>
-                </div>
-                <div class="testimonial-item tilt-card" data-animate="fade-up" style="--delay:300ms">
-                    <img src="3.jpg" alt="Foto de Ana Oliveira">
-                    <h2>Ana Oliveira</h2>
-                    <div class="stars">
-                        <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+
+                    <div class="testimonial-card">
+                        <div class="tc-avatar" style="--av:#2ecc71">C</div>
+                        <div class="tc-body">
+                            <div class="tc-stars">
+                                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                            </div>
+                            <p>"The ETL implementation Lizebio developed integrated systems we thought were impossible to connect. The result: real-time data and zero inconsistencies. Truly impressive work."</p>
+                            <div class="tc-author">
+                                <strong>Carlos Souza</strong>
+                                <span>CTO, DataBridge Solutions</span>
+                            </div>
+                        </div>
                     </div>
-                    <p>"Gerenciamento de banco de dados impecável. Resolveu problemas complexos com soluções elegantes e eficientes."</p>
-                </div>
+
+                    <div class="testimonial-card">
+                        <div class="tc-avatar" style="--av:#9b59b6">M</div>
+                        <div class="tc-body">
+                            <div class="tc-stars">
+                                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                            </div>
+                            <p>"Working with Lizebio has been outstanding. His analytical mindset and ability to translate complex data into actionable insights is truly remarkable. A genuine pleasure to collaborate with."</p>
+                            <div class="tc-author">
+                                <strong>Michael O'Brien</strong>
+                                <span>Director, McEnaney Group</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="tc-avatar" style="--av:#e67e22">L</div>
+                        <div class="tc-body">
+                            <div class="tc-stars">
+                                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                            </div>
+                            <p>"Extremely dedicated and detail-oriented professional. After Lizebio reorganised our database structure, our technical team was astonished by the quality and performance improvements."</p>
+                            <div class="tc-author">
+                                <strong>Laura Ferreira</strong>
+                                <span>IT Manager, Tel Contact Center</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="tc-avatar" style="--av:#1abc9c">P</div>
+                        <div class="tc-body">
+                            <div class="tc-stars">
+                                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                            </div>
+                            <p>"Lizebio identified patterns in our sales data that we had been missing for over a year. His analysis directly contributed to a 15% increase in our quarterly revenue. Highly recommended!"</p>
+                            <div class="tc-author">
+                                <strong>Patricia Barros</strong>
+                                <span>CEO, Mídia KitCom</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /.slider-track -->
+            </div><!-- /.slider-track-wrapper -->
+
+            <div class="slider-controls">
+                <button class="slider-btn slider-prev" aria-label="Previous"><i class='bx bx-chevron-left'></i></button>
+                <div class="slider-dots" id="slider-dots"></div>
+                <button class="slider-btn slider-next" aria-label="Next"><i class='bx bx-chevron-right'></i></button>
             </div>
         </div>
     </section>
 
-    <!-- ── CONTACT ────────────────────────────────── -->
+    <!-- ── CONTACT ────────────────────────────────────────── -->
     <section class="contact" id="contact">
         <h2 class="heading">Con<span>tact</span> Me</h2>
         <form id="contact-form" action="https://formspree.io/f/xjglnpld" method="POST" data-animate="fade-up">
@@ -314,14 +455,14 @@
         </form>
     </section>
 
-    <!-- ── FOOTER ─────────────────────────────────── -->
+    <!-- ── FOOTER ─────────────────────────────────────────── -->
     <footer class="footer">
         <div class="footer-inner">
             <div class="footer-logo">Lizebio<span>.</span></div>
             <div class="social">
                 <a href="https://www.linkedin.com/in/lizebio-junior-1361a7190" target="_blank" rel="noopener" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
                 <a href="https://github.com/Lizebio" target="_blank" rel="noopener" aria-label="GitHub"><i class='bx bxl-github'></i></a>
-                <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+                <a href="mailto:junior.lizebio06@hotmail.com" aria-label="Email"><i class='bx bx-envelope'></i></a>
             </div>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -332,15 +473,13 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="copyright">
-                <p>© 2024 Lizebio Junior. Crafted with <span>♥</span> &amp; code.</p>
+                <p>© 2025 Lizebio Junior · Dublin, Ireland · Crafted with <span>♥</span> & code.</p>
             </div>
         </div>
     </footer>
 
-    <!-- ── BACK TO TOP ────────────────────────────── -->
-    <button id="back-to-top" aria-label="Voltar ao topo">
-        <i class='bx bx-chevron-up'></i>
-    </button>
+    <!-- ── BACK TO TOP ────────────────────────────────────── -->
+    <button id="back-to-top" aria-label="Back to top"><i class='bx bx-chevron-up'></i></button>
 
     <script src="script.js"></script>
 </body>
