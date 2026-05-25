@@ -101,7 +101,7 @@ window.addEventListener('load', () => {
         requestAnimationFrame(loop);
     })();
 
-    document.querySelectorAll('a,button,.tilt-card,.badge,.service-box,.exp-tab')
+    document.querySelectorAll('a,button,.tilt-card,.badge,.service-box,.exp-tab,.project-card')
         .forEach(el => {
             el.addEventListener('mouseenter', () => ring.classList.add('hovering'));
             el.addEventListener('mouseleave', () => ring.classList.remove('hovering'));
@@ -243,7 +243,7 @@ document.querySelectorAll('.tilt-card').forEach(card => {
 /* ═══════════════════════════════════════════════════════════
    SERVICE BOX GLOW TRACKING
 ═══════════════════════════════════════════════════════════ */
-document.querySelectorAll('.service-box').forEach(box => {
+document.querySelectorAll('.service-box, .project-card').forEach(box => {
     box.addEventListener('mousemove', e => {
         const r = box.getBoundingClientRect();
         box.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%');
